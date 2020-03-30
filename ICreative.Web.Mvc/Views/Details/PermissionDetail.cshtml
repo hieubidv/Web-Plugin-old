@@ -1,0 +1,164 @@
+﻿
+@model System.Int32
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section plugin_css {
+    <link href="~/Content/css/Plugins/dataTables/datatables.min.css" rel="stylesheet" type="text/css">
+}
+
+@section plugin_scripts {
+    <script src="~/Content/js/plugins/tables/datatables/datatables.min.js"></script>
+    <script src="~/Content/js/plugins/tables/dataTables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Content/js/plugins/notifications/bootbox.min.js"></script>
+    <script src="~/Content/js/Pages/Datatables/PermissionDetail.js"></script>
+}
+
+
+<input type="hidden" id="PermissionId" name="PermissionId" value="@Model" />
+<div class="ibox ">
+    <div class="ibox-title">
+        <h5>Basic Data Tables example with responsive plugin</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href="#" class="dropdown-item">Config option 1</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <table class="table text-nowrap">
+            <thead>
+                <tr>
+                    <th>Thuoc tinh</th>
+                    <th>Gia tri</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-active table-border-double">
+                    <td colspan="2">Today</td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">PermissionId</span></td>
+                    <td><label id="PermissionId" name="PermissionId"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">PermissionName</span></td>
+                    <td><label id="PermissionName" name="PermissionName"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">PermissionDescription</span></td>
+                    <td><label id="PermissionDescription" name="PermissionDescription"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">ControllerName</span></td>
+                    <td><label id="ControllerName" name="ControllerName"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">ActionName</span></td>
+                    <td><label id="ActionName" name="ActionName"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">IsAnonymous</span></td>
+                    <td><label id="IsAnonymous" name="IsAnonymous"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">IsDefaultAllow</span></td>
+                    <td><label id="IsDefaultAllow" name="IsDefaultAllow"> not thing</label></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="ibox ">
+    <div class="ibox-title">
+        <h5>Basic Data Tables example with responsive plugin</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href="#" class="dropdown-item">Config option 1</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="tabs-container">
+            <ul class="nav nav-tabs" role="tablist">
+                <li><a class="nav-link active" data-toggle="tab" href="#tab-1"> Role</a></li>
+                <li><a class="nav-link" data-toggle="tab" href="#tab-2"> User</a></li>			
+            </ul>
+            <div class="tab-content">
+
+                <div role="tabpanel" id="tab-1" class="tab-pane active">
+                    <div class="panel-body">
+                      <div class="table-responsive">		
+                        <table id="RoleTable" class="table table-bordered table-hover datatable-highlight dataTable no-footer" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>RoleId</th>
+                                    <th>RoleName</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                        </table>
+		              </div>
+                    </div>
+                </div>
+
+                <div role="tabpanel" id="tab-2" class="tab-pane">
+                    <div class="panel-body">
+                      <div class="table-responsive">		
+                        <table id="UserTable" class="table table-bordered table-hover datatable-highlight dataTable no-footer" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>UserId</th>
+                                    <th>UserName</th>
+                                    <th>Email</th>
+                                    <th>Password</th>
+                                    <th>FirstName</th>
+                                    <th>LastName</th>
+                                    <th>PhoneNumber</th>
+                                    <th>BirthDay</th>
+                                    <th>IpAddress</th>
+                                    <th>Status</th>
+                                    <th>CreateDate</th>
+                                </tr>
+                            </thead>
+                        </table>
+		              </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

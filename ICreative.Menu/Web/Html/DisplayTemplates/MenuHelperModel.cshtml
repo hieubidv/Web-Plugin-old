@@ -1,0 +1,55 @@
+﻿@using ICreative.Menu.Web.Html.Models
+@model ICreative.Menu.Web.Html.Models.MenuHelperModel
+
+
+@helper TopMenu(List<SiteMapNodeModel> nodeList)
+{
+    <ul class="sky-mega-menu sky-mega-menu-anim-flip sky-mega-menu-response-to-icons">
+        @foreach (SiteMapNodeModel node in nodeList)
+        {
+            string url = node.IsClickable ? node.Url : "#";
+            if (!node.Children.Any())
+            {
+                <li>
+                    <a href="@url"><i class="fa fa-single fa-home"></i></a>
+                </li>
+            }
+            else
+            {
+                <li aria-haspopup="true">
+                    <a href="@url"><i class="fa fa-star"></i>@node.Title<i class="fa fa-indicator fa-chevron-down"></i></a>
+                    @DropDownMenu(node.Children, true)
+                </li>
+            }
+        }
+      </ul>
+}
+
+
+
+        @helper DropDownMenu(SiteMapNodeModelList nodeList, bool isMultiLevel = false)
+        {
+            <div class="grid-container3">
+                <ul>
+                    @foreach (SiteMapNodeModel node in nodeList)
+                    {
+                        string url = node.IsClickable ? node.Url : "#";
+
+                        if (!node.Children.Any())
+                        {
+                            <li><a href="@url">@node.Title</a></li>
+                        }
+                        else
+                        {
+                            <li aria-haspopup="true">
+                                <a href="@url"><i class="fa fa-star"></i>@node.Title<i class="fa fa-indicator fa-chevron-down"></i></a>
+                                @DropDownMenu(node.Children, true)
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        }
+
+        @TopMenu(Model.Nodes)
+

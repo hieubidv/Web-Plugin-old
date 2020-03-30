@@ -1,0 +1,159 @@
+﻿
+@model System.Int32
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section plugin_css {
+    <link href="~/Content/css/Plugins/dataTables/datatables.min.css" rel="stylesheet" type="text/css">
+}
+
+@section plugin_scripts {
+    <script src="~/Content/js/plugins/tables/datatables/datatables.min.js"></script>
+    <script src="~/Content/js/plugins/tables/dataTables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Content/js/plugins/notifications/bootbox.min.js"></script>
+    <script src="~/Content/js/Pages/Datatables/OrderDetail.js"></script>
+}
+
+
+<input type="hidden" id="OrderID" name="OrderID" value="@Model" />
+<div class="ibox ">
+    <div class="ibox-title">
+        <h5>Basic Data Tables example with responsive plugin</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href="#" class="dropdown-item">Config option 1</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <table class="table text-nowrap">
+            <thead>
+                <tr>
+                    <th>Thuoc tinh</th>
+                    <th>Gia tri</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-active table-border-double">
+                    <td colspan="2">Today</td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">OrderID</span></td>
+                    <td><label id="OrderID" name="OrderID"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">OrderDate</span></td>
+                    <td><label id="OrderDate" name="OrderDate"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">RequiredDate</span></td>
+                    <td><label id="RequiredDate" name="RequiredDate"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">ShippedDate</span></td>
+                    <td><label id="ShippedDate" name="ShippedDate"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">Freight</span></td>
+                    <td><label id="Freight" name="Freight"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">ShipName</span></td>
+                    <td><label id="ShipName" name="ShipName"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">ShipAddress</span></td>
+                    <td><label id="ShipAddress" name="ShipAddress"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">ShipCity</span></td>
+                    <td><label id="ShipCity" name="ShipCity"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">ShipRegion</span></td>
+                    <td><label id="ShipRegion" name="ShipRegion"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">ShipPostalCode</span></td>
+                    <td><label id="ShipPostalCode" name="ShipPostalCode"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">ShipCountry</span></td>
+                    <td><label id="ShipCountry" name="ShipCountry"> not thing</label></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="ibox ">
+    <div class="ibox-title">
+        <h5>Basic Data Tables example with responsive plugin</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href="#" class="dropdown-item">Config option 1</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="tabs-container">
+            <ul class="nav nav-tabs" role="tablist">
+                <li><a class="nav-link active" data-toggle="tab" href="#tab-1"> Product</a></li>
+            </ul>
+            <div class="tab-content">
+
+                <div role="tabpanel" id="tab-1" class="tab-pane active">
+                    <div class="panel-body">
+                      <div class="table-responsive">		
+                        <table id="ProductTable" class="table table-bordered table-hover datatable-highlight dataTable no-footer" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>ProductID</th>
+                                    <th>ProductName</th>
+                                    <th>QuantityPerUnit</th>
+                                    <th>UnitPrice</th>
+                                    <th>UnitsInStock</th>
+                                    <th>UnitsOnOrder</th>
+                                    <th>ReorderLevel</th>
+                                    <th>Discontinued</th>
+                                </tr>
+                            </thead>
+                        </table>
+		              </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

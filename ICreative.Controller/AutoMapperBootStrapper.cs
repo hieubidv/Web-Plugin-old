@@ -1,0 +1,164 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using ICreative.Infrastructure;
+using ICreative.Model;
+using ICreative.Services.ViewModels;
+using AutoMapper;
+using ICreative.Controllers.ViewModels;
+using ICreative.Services.Messaging;
+using AutoMapper.Configuration;
+namespace ICreative.Controllers
+{
+    public class AutoMapperBootStrapper
+    {
+        public static void ControllerMap()
+        {
+            MapperConfigurationExpression _configuration = ICreative.Services.AutoMapperBootStrapper.Configuation;
+
+                  _configuration.CreateMap<PosDeviceView, PosDeviceFlatViewModel>();                   
+                  _configuration.CreateMap<PosAddressView, PosAddressFlatViewModel>();                   
+                  _configuration.CreateMap<PosStatusTerminalView, PosStatusTerminalFlatViewModel>();                   
+                  _configuration.CreateMap<PosStatusSimView, PosStatusSimFlatViewModel>();                   
+                  _configuration.CreateMap<PosSimProviderView, PosSimProviderFlatViewModel>();                   
+                  _configuration.CreateMap<PosMerchantView, PosMerchantFlatViewModel>();                   
+                  _configuration.CreateMap<PosSimView, PosSimFlatViewModel>();                   
+                  _configuration.CreateMap<PosReceiptOfTestingView, PosReceiptOfTestingFlatViewModel>();                   
+                  _configuration.CreateMap<PosReceiptOfDeliveryView, PosReceiptOfDeliveryFlatViewModel>();                   
+                  _configuration.CreateMap<PosTerminalView, PosTerminalFlatViewModel>();                   
+                  _configuration.CreateMap<CategoryView, CategoryFlatViewModel>();                   
+                  _configuration.CreateMap<MenuItemView, MenuItemFlatViewModel>();                   
+                  _configuration.CreateMap<PermissionView, PermissionFlatViewModel>();                   
+                  _configuration.CreateMap<EmployeeView, EmployeeFlatViewModel>();                   
+                  _configuration.CreateMap<CustomerView, CustomerFlatViewModel>();                   
+                  _configuration.CreateMap<CustomerDemographicView, CustomerDemographicFlatViewModel>();                   
+                  _configuration.CreateMap<RoleView, RoleFlatViewModel>();                   
+                  _configuration.CreateMap<RestrictionView, RestrictionFlatViewModel>();                   
+                  _configuration.CreateMap<RegionView, RegionFlatViewModel>();                   
+                  _configuration.CreateMap<SupplierView, SupplierFlatViewModel>();                   
+                  _configuration.CreateMap<ShipperView, ShipperFlatViewModel>();                   
+                  _configuration.CreateMap<RoomView, RoomFlatViewModel>();                   
+                  _configuration.CreateMap<TerritoryView, TerritoryFlatViewModel>();                   
+                  _configuration.CreateMap<ProductView, ProductFlatViewModel>();                   
+                  _configuration.CreateMap<OrderView, OrderFlatViewModel>();                   
+                  _configuration.CreateMap<UserView, UserFlatViewModel>();                   
+               
+              //DetaiView map
+              
+                   _configuration.CreateMap<PosDeviceView, PosDeviceDetailView>();                    
+                   _configuration.CreateMap<PosAddressView, PosAddressDetailView>();                    
+                   _configuration.CreateMap<PosStatusTerminalView, PosStatusTerminalDetailView>();                    
+                   _configuration.CreateMap<PosStatusSimView, PosStatusSimDetailView>();                    
+                   _configuration.CreateMap<PosSimProviderView, PosSimProviderDetailView>();                    
+                   _configuration.CreateMap<PosMerchantView, PosMerchantDetailView>();                    
+                   _configuration.CreateMap<PosSimView, PosSimDetailView>();                    
+                   _configuration.CreateMap<PosReceiptOfTestingView, PosReceiptOfTestingDetailView>();                    
+                   _configuration.CreateMap<PosReceiptOfDeliveryView, PosReceiptOfDeliveryDetailView>();                    
+                   _configuration.CreateMap<PosTerminalView, PosTerminalDetailView>();                    
+                   _configuration.CreateMap<CategoryView, CategoryDetailView>();                    
+                   _configuration.CreateMap<MenuItemView, MenuItemDetailView>();                    
+                   _configuration.CreateMap<PermissionView, PermissionDetailView>();                    
+                   _configuration.CreateMap<EmployeeView, EmployeeDetailView>();                    
+                   _configuration.CreateMap<CustomerView, CustomerDetailView>();                    
+                   _configuration.CreateMap<CustomerDemographicView, CustomerDemographicDetailView>();                    
+                   _configuration.CreateMap<RoleView, RoleDetailView>();                    
+                   _configuration.CreateMap<RestrictionView, RestrictionDetailView>();                    
+                   _configuration.CreateMap<RegionView, RegionDetailView>();                    
+                   _configuration.CreateMap<SupplierView, SupplierDetailView>();                    
+                   _configuration.CreateMap<ShipperView, ShipperDetailView>();                    
+                   _configuration.CreateMap<RoomView, RoomDetailView>();                    
+                   _configuration.CreateMap<TerritoryView, TerritoryDetailView>();                    
+                   _configuration.CreateMap<ProductView, ProductDetailView>();                    
+                   _configuration.CreateMap<OrderView, OrderDetailView>();                    
+                   _configuration.CreateMap<UserView, UserDetailView>();                    
+              
+              //ModifyRequest map
+              
+                   _configuration.CreateMap<PosDeviceView, ModifyPosDeviceRequest>();                    
+                   _configuration.CreateMap<PosAddressView, ModifyPosAddressRequest>();                    
+                   _configuration.CreateMap<PosStatusTerminalView, ModifyPosStatusTerminalRequest>();                    
+                   _configuration.CreateMap<PosStatusSimView, ModifyPosStatusSimRequest>();                    
+                   _configuration.CreateMap<PosSimProviderView, ModifyPosSimProviderRequest>();                    
+                   _configuration.CreateMap<PosMerchantView, ModifyPosMerchantRequest>();                    
+                   _configuration.CreateMap<PosSimView, ModifyPosSimRequest>();                    
+                   _configuration.CreateMap<PosReceiptOfTestingView, ModifyPosReceiptOfTestingRequest>();                    
+                   _configuration.CreateMap<PosReceiptOfDeliveryView, ModifyPosReceiptOfDeliveryRequest>();                    
+                   _configuration.CreateMap<PosTerminalView, ModifyPosTerminalRequest>();                    
+                   _configuration.CreateMap<CategoryView, ModifyCategoryRequest>();                    
+                   _configuration.CreateMap<MenuItemView, ModifyMenuItemRequest>();                    
+                   _configuration.CreateMap<PermissionView, ModifyPermissionRequest>();                    
+                   _configuration.CreateMap<EmployeeView, ModifyEmployeeRequest>();                    
+                   _configuration.CreateMap<CustomerView, ModifyCustomerRequest>();                    
+                   _configuration.CreateMap<CustomerDemographicView, ModifyCustomerDemographicRequest>();                    
+                   _configuration.CreateMap<RoleView, ModifyRoleRequest>();                    
+                   _configuration.CreateMap<RestrictionView, ModifyRestrictionRequest>();                    
+                   _configuration.CreateMap<RegionView, ModifyRegionRequest>();                    
+                   _configuration.CreateMap<SupplierView, ModifySupplierRequest>();                    
+                   _configuration.CreateMap<ShipperView, ModifyShipperRequest>();                    
+                   _configuration.CreateMap<RoomView, ModifyRoomRequest>();                    
+                   _configuration.CreateMap<TerritoryView, ModifyTerritoryRequest>();                    
+                   _configuration.CreateMap<ProductView, ModifyProductRequest>();                    
+                   _configuration.CreateMap<OrderView, ModifyOrderRequest>();                    
+                   _configuration.CreateMap<UserView, ModifyUserRequest>();                    
+
+                   _configuration.CreateMap<PosDeviceView, DetailPosDevice_PosDeviceDetailView>();  
+                   _configuration.CreateMap<PosDeviceView, DetailPosDevice_PosTerminalDetailView>();               					
+                   _configuration.CreateMap<PosAddressView, DetailPosAddress_PosAddressDetailView>();  
+                   _configuration.CreateMap<PosAddressView, DetailPosAddress_PosMerchantDetailView>();               					
+                   _configuration.CreateMap<PosStatusTerminalView, DetailPosStatusTerminal_PosStatusTerminalDetailView>();  
+                   _configuration.CreateMap<PosStatusTerminalView, DetailPosStatusTerminal_PosTerminalDetailView>();               					
+                   _configuration.CreateMap<PosStatusSimView, DetailPosStatusSim_PosStatusSimDetailView>();  
+                   _configuration.CreateMap<PosStatusSimView, DetailPosStatusSim_PosSimDetailView>();               					
+                   _configuration.CreateMap<PosSimProviderView, DetailPosSimProvider_PosSimProviderDetailView>();  
+                   _configuration.CreateMap<PosSimProviderView, DetailPosSimProvider_PosSimDetailView>();               					
+                   _configuration.CreateMap<PosMerchantView, DetailPosMerchant_PosMerchantDetailView>();  
+                   _configuration.CreateMap<PosMerchantView, DetailPosMerchant_PosReceiptOfTestingDetailView>();               					
+                   _configuration.CreateMap<PosSimView, DetailPosSim_PosSimDetailView>();  
+                   _configuration.CreateMap<PosSimView, DetailPosSim_PosTerminalDetailView>();               					
+                   _configuration.CreateMap<PosReceiptOfTestingView, DetailPosReceiptOfTesting_PosReceiptOfTestingDetailView>();  
+                   _configuration.CreateMap<PosReceiptOfTestingView, DetailPosReceiptOfTesting_PosTerminalDetailView>();               					
+                   _configuration.CreateMap<PosReceiptOfDeliveryView, DetailPosReceiptOfDelivery_PosReceiptOfDeliveryDetailView>();  
+                   _configuration.CreateMap<PosReceiptOfDeliveryView, DetailPosReceiptOfDelivery_PosTerminalDetailView>();               					
+                   _configuration.CreateMap<PosTerminalView, DetailPosTerminal_PosTerminalDetailView>();  
+                   _configuration.CreateMap<PosTerminalView, DetailPosTerminal_PosReceiptOfDeliveryDetailView>();               					
+                   _configuration.CreateMap<PosTerminalView, DetailPosTerminal_PosReceiptOfTestingDetailView>();               					
+                   _configuration.CreateMap<CategoryView, DetailCategory_CategoryDetailView>();  
+                   _configuration.CreateMap<CategoryView, DetailCategory_ProductDetailView>();               					
+                   _configuration.CreateMap<MenuItemView, DetailMenuItem_MenuItemDetailView>();  
+                   _configuration.CreateMap<PermissionView, DetailPermission_PermissionDetailView>();  
+                   _configuration.CreateMap<PermissionView, DetailPermission_RoleDetailView>();               					
+                   _configuration.CreateMap<PermissionView, DetailPermission_UserDetailView>();               					
+                   _configuration.CreateMap<EmployeeView, DetailEmployee_EmployeeDetailView>();  
+                   _configuration.CreateMap<EmployeeView, DetailEmployee_TerritoryDetailView>();               					
+                   _configuration.CreateMap<EmployeeView, DetailEmployee_OrderDetailView>();               					
+                   _configuration.CreateMap<CustomerView, DetailCustomer_CustomerDetailView>();  
+                   _configuration.CreateMap<CustomerView, DetailCustomer_CustomerDemographicDetailView>();               					
+                   _configuration.CreateMap<CustomerView, DetailCustomer_OrderDetailView>();               					
+                   _configuration.CreateMap<CustomerDemographicView, DetailCustomerDemographic_CustomerDemographicDetailView>();  
+                   _configuration.CreateMap<CustomerDemographicView, DetailCustomerDemographic_CustomerDetailView>();               					
+                   _configuration.CreateMap<RoleView, DetailRole_RoleDetailView>();  
+                   _configuration.CreateMap<RoleView, DetailRole_PermissionDetailView>();               					
+                   _configuration.CreateMap<RoleView, DetailRole_UserDetailView>();               					
+                   _configuration.CreateMap<RestrictionView, DetailRestriction_RestrictionDetailView>();  
+                   _configuration.CreateMap<RegionView, DetailRegion_RegionDetailView>();  
+                   _configuration.CreateMap<RegionView, DetailRegion_TerritoryDetailView>();               					
+                   _configuration.CreateMap<SupplierView, DetailSupplier_SupplierDetailView>();  
+                   _configuration.CreateMap<SupplierView, DetailSupplier_ProductDetailView>();               					
+                   _configuration.CreateMap<ShipperView, DetailShipper_ShipperDetailView>();  
+                   _configuration.CreateMap<ShipperView, DetailShipper_OrderDetailView>();               					
+                   _configuration.CreateMap<RoomView, DetailRoom_RoomDetailView>();  
+                   _configuration.CreateMap<RoomView, DetailRoom_UserDetailView>();               					
+                   _configuration.CreateMap<TerritoryView, DetailTerritory_TerritoryDetailView>();  
+                   _configuration.CreateMap<TerritoryView, DetailTerritory_EmployeeDetailView>();               					
+                   _configuration.CreateMap<ProductView, DetailProduct_ProductDetailView>();  
+                   _configuration.CreateMap<ProductView, DetailProduct_OrderDetailView>();               					
+                   _configuration.CreateMap<OrderView, DetailOrder_OrderDetailView>();  
+                   _configuration.CreateMap<OrderView, DetailOrder_ProductDetailView>();               					
+                   _configuration.CreateMap<UserView, DetailUser_UserDetailView>();  
+                   _configuration.CreateMap<UserView, DetailUser_RoleDetailView>();               					
+                   _configuration.CreateMap<UserView, DetailUser_PermissionDetailView>();               					
+                   _configuration.CreateMap<UserView, DetailUser_PosReceiptOfDeliveryDetailView>();               					
+        }
+    }
+}

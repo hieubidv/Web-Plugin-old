@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55F9617A-DEA9-4704-A897-D594A7BBC959}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ICreative.Service</RootNamespace>
+    <AssemblyName>ICreative.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=1.0.0.155, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\AutoMapper.dll</HintPath>
+    </Reference>  
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMapperBootStrapper.cs" />
+    <Compile Include="Messaging\Authenticate\ChangePasswordRequest.cs" />
+    <Compile Include="Messaging\Authenticate\ChangePasswordResponse.cs" />
+    <Compile Include="Messaging\Authenticate\LockRequest.cs" />
+    <Compile Include="Messaging\Authenticate\LockResponse.cs" />
+    <Compile Include="Messaging\Authenticate\ResetPasswordRequest.cs" />
+    <Compile Include="Messaging\Authenticate\ResetPasswordResponse.cs" />
+    <Compile Include="Messaging\Authenticate\UnlockRequest.cs" />
+    <Compile Include="Messaging\Authenticate\UnlockResponse.cs" />
+    <Compile Include="Messaging\Authenticate\UpdateProfileRequest.cs" />
+    <Compile Include="Messaging\Authenticate\UpdateProfileResponse.cs" />
+    <Compile Include="Messaging\Authenticate\ValidatePasswordRequest.cs" />
+    <Compile Include="Messaging\Authenticate\ValidatePasswordResponse.cs" />
+    <Compile Include="Interfaces\IMembershipService.cs" />   
+    <Compile Include="Implementations\MembershipService.cs" />   
+    <Compile Include="Implementations\PosDeviceService.cs" />   
+    <Compile Include="Messaging\PosDeviceService\CreatePosDeviceRequest.cs" />
+    <Compile Include="Messaging\PosDeviceService\ModifyPosDeviceRequest.cs" /> 
+    <Compile Include="Interfaces\IPosDeviceService.cs" />   
+    <Compile Include="Mapping\PosDeviceMapper.cs" /> 
+    <Compile Include="Messaging\PosDeviceService\CreatePosDeviceResponse.cs" />
+    <Compile Include="Messaging\PosDeviceService\ModifyPosDeviceResponse.cs" />
+    <Compile Include="Messaging\PosDeviceService\GetPosDeviceResponse.cs" />
+    <Compile Include="Messaging\PosDeviceService\GetPosDeviceRequest.cs" />    
+    <Compile Include="Messaging\PosDeviceService\GetAllPosDeviceResponse.cs" />
+    <Compile Include="Messaging\PosDeviceService\RemovePosDeviceRequest.cs" />    
+    <Compile Include="Messaging\PosDeviceService\RemovePosDeviceResponse.cs" /> 
+    <Compile Include="ViewModels\PosDeviceView.cs" />
+    <Compile Include="Implementations\PosAddressService.cs" />   
+    <Compile Include="Messaging\PosAddressService\CreatePosAddressRequest.cs" />
+    <Compile Include="Messaging\PosAddressService\ModifyPosAddressRequest.cs" /> 
+    <Compile Include="Interfaces\IPosAddressService.cs" />   
+    <Compile Include="Mapping\PosAddressMapper.cs" /> 
+    <Compile Include="Messaging\PosAddressService\CreatePosAddressResponse.cs" />
+    <Compile Include="Messaging\PosAddressService\ModifyPosAddressResponse.cs" />
+    <Compile Include="Messaging\PosAddressService\GetPosAddressResponse.cs" />
+    <Compile Include="Messaging\PosAddressService\GetPosAddressRequest.cs" />    
+    <Compile Include="Messaging\PosAddressService\GetAllPosAddressResponse.cs" />
+    <Compile Include="Messaging\PosAddressService\RemovePosAddressRequest.cs" />    
+    <Compile Include="Messaging\PosAddressService\RemovePosAddressResponse.cs" /> 
+    <Compile Include="ViewModels\PosAddressView.cs" />
+    <Compile Include="Implementations\PosStatusTerminalService.cs" />   
+    <Compile Include="Messaging\PosStatusTerminalService\CreatePosStatusTerminalRequest.cs" />
+    <Compile Include="Messaging\PosStatusTerminalService\ModifyPosStatusTerminalRequest.cs" /> 
+    <Compile Include="Interfaces\IPosStatusTerminalService.cs" />   
+    <Compile Include="Mapping\PosStatusTerminalMapper.cs" /> 
+    <Compile Include="Messaging\PosStatusTerminalService\CreatePosStatusTerminalResponse.cs" />
+    <Compile Include="Messaging\PosStatusTerminalService\ModifyPosStatusTerminalResponse.cs" />
+    <Compile Include="Messaging\PosStatusTerminalService\GetPosStatusTerminalResponse.cs" />
+    <Compile Include="Messaging\PosStatusTerminalService\GetPosStatusTerminalRequest.cs" />    
+    <Compile Include="Messaging\PosStatusTerminalService\GetAllPosStatusTerminalResponse.cs" />
+    <Compile Include="Messaging\PosStatusTerminalService\RemovePosStatusTerminalRequest.cs" />    
+    <Compile Include="Messaging\PosStatusTerminalService\RemovePosStatusTerminalResponse.cs" /> 
+    <Compile Include="ViewModels\PosStatusTerminalView.cs" />
+    <Compile Include="Implementations\PosStatusSimService.cs" />   
+    <Compile Include="Messaging\PosStatusSimService\CreatePosStatusSimRequest.cs" />
+    <Compile Include="Messaging\PosStatusSimService\ModifyPosStatusSimRequest.cs" /> 
+    <Compile Include="Interfaces\IPosStatusSimService.cs" />   
+    <Compile Include="Mapping\PosStatusSimMapper.cs" /> 
+    <Compile Include="Messaging\PosStatusSimService\CreatePosStatusSimResponse.cs" />
+    <Compile Include="Messaging\PosStatusSimService\ModifyPosStatusSimResponse.cs" />
+    <Compile Include="Messaging\PosStatusSimService\GetPosStatusSimResponse.cs" />
+    <Compile Include="Messaging\PosStatusSimService\GetPosStatusSimRequest.cs" />    
+    <Compile Include="Messaging\PosStatusSimService\GetAllPosStatusSimResponse.cs" />
+    <Compile Include="Messaging\PosStatusSimService\RemovePosStatusSimRequest.cs" />    
+    <Compile Include="Messaging\PosStatusSimService\RemovePosStatusSimResponse.cs" /> 
+    <Compile Include="ViewModels\PosStatusSimView.cs" />
+    <Compile Include="Implementations\PosSimProviderService.cs" />   
+    <Compile Include="Messaging\PosSimProviderService\CreatePosSimProviderRequest.cs" />
+    <Compile Include="Messaging\PosSimProviderService\ModifyPosSimProviderRequest.cs" /> 
+    <Compile Include="Interfaces\IPosSimProviderService.cs" />   
+    <Compile Include="Mapping\PosSimProviderMapper.cs" /> 
+    <Compile Include="Messaging\PosSimProviderService\CreatePosSimProviderResponse.cs" />
+    <Compile Include="Messaging\PosSimProviderService\ModifyPosSimProviderResponse.cs" />
+    <Compile Include="Messaging\PosSimProviderService\GetPosSimProviderResponse.cs" />
+    <Compile Include="Messaging\PosSimProviderService\GetPosSimProviderRequest.cs" />    
+    <Compile Include="Messaging\PosSimProviderService\GetAllPosSimProviderResponse.cs" />
+    <Compile Include="Messaging\PosSimProviderService\RemovePosSimProviderRequest.cs" />    
+    <Compile Include="Messaging\PosSimProviderService\RemovePosSimProviderResponse.cs" /> 
+    <Compile Include="ViewModels\PosSimProviderView.cs" />
+    <Compile Include="Implementations\PosMerchantService.cs" />   
+    <Compile Include="Messaging\PosMerchantService\CreatePosMerchantRequest.cs" />
+    <Compile Include="Messaging\PosMerchantService\ModifyPosMerchantRequest.cs" /> 
+    <Compile Include="Interfaces\IPosMerchantService.cs" />   
+    <Compile Include="Mapping\PosMerchantMapper.cs" /> 
+    <Compile Include="Messaging\PosMerchantService\CreatePosMerchantResponse.cs" />
+    <Compile Include="Messaging\PosMerchantService\ModifyPosMerchantResponse.cs" />
+    <Compile Include="Messaging\PosMerchantService\GetPosMerchantResponse.cs" />
+    <Compile Include="Messaging\PosMerchantService\GetPosMerchantRequest.cs" />    
+    <Compile Include="Messaging\PosMerchantService\GetAllPosMerchantResponse.cs" />
+    <Compile Include="Messaging\PosMerchantService\RemovePosMerchantRequest.cs" />    
+    <Compile Include="Messaging\PosMerchantService\RemovePosMerchantResponse.cs" /> 
+    <Compile Include="ViewModels\PosMerchantView.cs" />
+    <Compile Include="Implementations\PosSimService.cs" />   
+    <Compile Include="Messaging\PosSimService\CreatePosSimRequest.cs" />
+    <Compile Include="Messaging\PosSimService\ModifyPosSimRequest.cs" /> 
+    <Compile Include="Interfaces\IPosSimService.cs" />   
+    <Compile Include="Mapping\PosSimMapper.cs" /> 
+    <Compile Include="Messaging\PosSimService\CreatePosSimResponse.cs" />
+    <Compile Include="Messaging\PosSimService\ModifyPosSimResponse.cs" />
+    <Compile Include="Messaging\PosSimService\GetPosSimResponse.cs" />
+    <Compile Include="Messaging\PosSimService\GetPosSimRequest.cs" />    
+    <Compile Include="Messaging\PosSimService\GetAllPosSimResponse.cs" />
+    <Compile Include="Messaging\PosSimService\RemovePosSimRequest.cs" />    
+    <Compile Include="Messaging\PosSimService\RemovePosSimResponse.cs" /> 
+    <Compile Include="ViewModels\PosSimView.cs" />
+    <Compile Include="Implementations\PosReceiptOfTestingService.cs" />   
+    <Compile Include="Messaging\PosReceiptOfTestingService\CreatePosReceiptOfTestingRequest.cs" />
+    <Compile Include="Messaging\PosReceiptOfTestingService\ModifyPosReceiptOfTestingRequest.cs" /> 
+    <Compile Include="Interfaces\IPosReceiptOfTestingService.cs" />   
+    <Compile Include="Mapping\PosReceiptOfTestingMapper.cs" /> 
+    <Compile Include="Messaging\PosReceiptOfTestingService\CreatePosReceiptOfTestingResponse.cs" />
+    <Compile Include="Messaging\PosReceiptOfTestingService\ModifyPosReceiptOfTestingResponse.cs" />
+    <Compile Include="Messaging\PosReceiptOfTestingService\GetPosReceiptOfTestingResponse.cs" />
+    <Compile Include="Messaging\PosReceiptOfTestingService\GetPosReceiptOfTestingRequest.cs" />    
+    <Compile Include="Messaging\PosReceiptOfTestingService\GetAllPosReceiptOfTestingResponse.cs" />
+    <Compile Include="Messaging\PosReceiptOfTestingService\RemovePosReceiptOfTestingRequest.cs" />    
+    <Compile Include="Messaging\PosReceiptOfTestingService\RemovePosReceiptOfTestingResponse.cs" /> 
+    <Compile Include="ViewModels\PosReceiptOfTestingView.cs" />
+    <Compile Include="Implementations\PosReceiptOfDeliveryService.cs" />   
+    <Compile Include="Messaging\PosReceiptOfDeliveryService\CreatePosReceiptOfDeliveryRequest.cs" />
+    <Compile Include="Messaging\PosReceiptOfDeliveryService\ModifyPosReceiptOfDeliveryRequest.cs" /> 
+    <Compile Include="Interfaces\IPosReceiptOfDeliveryService.cs" />   
+    <Compile Include="Mapping\PosReceiptOfDeliveryMapper.cs" /> 
+    <Compile Include="Messaging\PosReceiptOfDeliveryService\CreatePosReceiptOfDeliveryResponse.cs" />
+    <Compile Include="Messaging\PosReceiptOfDeliveryService\ModifyPosReceiptOfDeliveryResponse.cs" />
+    <Compile Include="Messaging\PosReceiptOfDeliveryService\GetPosReceiptOfDeliveryResponse.cs" />
+    <Compile Include="Messaging\PosReceiptOfDeliveryService\GetPosReceiptOfDeliveryRequest.cs" />    
+    <Compile Include="Messaging\PosReceiptOfDeliveryService\GetAllPosReceiptOfDeliveryResponse.cs" />
+    <Compile Include="Messaging\PosReceiptOfDeliveryService\RemovePosReceiptOfDeliveryRequest.cs" />    
+    <Compile Include="Messaging\PosReceiptOfDeliveryService\RemovePosReceiptOfDeliveryResponse.cs" /> 
+    <Compile Include="ViewModels\PosReceiptOfDeliveryView.cs" />
+    <Compile Include="Implementations\PosTerminalService.cs" />   
+    <Compile Include="Messaging\PosTerminalService\CreatePosTerminalRequest.cs" />
+    <Compile Include="Messaging\PosTerminalService\ModifyPosTerminalRequest.cs" /> 
+    <Compile Include="Interfaces\IPosTerminalService.cs" />   
+    <Compile Include="Mapping\PosTerminalMapper.cs" /> 
+    <Compile Include="Messaging\PosTerminalService\CreatePosTerminalResponse.cs" />
+    <Compile Include="Messaging\PosTerminalService\ModifyPosTerminalResponse.cs" />
+    <Compile Include="Messaging\PosTerminalService\GetPosTerminalResponse.cs" />
+    <Compile Include="Messaging\PosTerminalService\GetPosTerminalRequest.cs" />    
+    <Compile Include="Messaging\PosTerminalService\GetAllPosTerminalResponse.cs" />
+    <Compile Include="Messaging\PosTerminalService\RemovePosTerminalRequest.cs" />    
+    <Compile Include="Messaging\PosTerminalService\RemovePosTerminalResponse.cs" /> 
+    <Compile Include="ViewModels\PosTerminalView.cs" />
+    <Compile Include="Implementations\CategoryService.cs" />   
+    <Compile Include="Messaging\CategoryService\CreateCategoryRequest.cs" />
+    <Compile Include="Messaging\CategoryService\ModifyCategoryRequest.cs" /> 
+    <Compile Include="Interfaces\ICategoryService.cs" />   
+    <Compile Include="Mapping\CategoryMapper.cs" /> 
+    <Compile Include="Messaging\CategoryService\CreateCategoryResponse.cs" />
+    <Compile Include="Messaging\CategoryService\ModifyCategoryResponse.cs" />
+    <Compile Include="Messaging\CategoryService\GetCategoryResponse.cs" />
+    <Compile Include="Messaging\CategoryService\GetCategoryRequest.cs" />    
+    <Compile Include="Messaging\CategoryService\GetAllCategoryResponse.cs" />
+    <Compile Include="Messaging\CategoryService\RemoveCategoryRequest.cs" />    
+    <Compile Include="Messaging\CategoryService\RemoveCategoryResponse.cs" /> 
+    <Compile Include="ViewModels\CategoryView.cs" />
+    <Compile Include="Implementations\MenuItemService.cs" />   
+    <Compile Include="Messaging\MenuItemService\CreateMenuItemRequest.cs" />
+    <Compile Include="Messaging\MenuItemService\ModifyMenuItemRequest.cs" /> 
+    <Compile Include="Interfaces\IMenuItemService.cs" />   
+    <Compile Include="Mapping\MenuItemMapper.cs" /> 
+    <Compile Include="Messaging\MenuItemService\CreateMenuItemResponse.cs" />
+    <Compile Include="Messaging\MenuItemService\ModifyMenuItemResponse.cs" />
+    <Compile Include="Messaging\MenuItemService\GetMenuItemResponse.cs" />
+    <Compile Include="Messaging\MenuItemService\GetMenuItemRequest.cs" />    
+    <Compile Include="Messaging\MenuItemService\GetAllMenuItemResponse.cs" />
+    <Compile Include="Messaging\MenuItemService\RemoveMenuItemRequest.cs" />    
+    <Compile Include="Messaging\MenuItemService\RemoveMenuItemResponse.cs" /> 
+    <Compile Include="ViewModels\MenuItemView.cs" />
+    <Compile Include="Implementations\PermissionService.cs" />   
+    <Compile Include="Messaging\PermissionService\CreatePermissionRequest.cs" />
+    <Compile Include="Messaging\PermissionService\ModifyPermissionRequest.cs" /> 
+    <Compile Include="Interfaces\IPermissionService.cs" />   
+    <Compile Include="Mapping\PermissionMapper.cs" /> 
+    <Compile Include="Messaging\PermissionService\CreatePermissionResponse.cs" />
+    <Compile Include="Messaging\PermissionService\ModifyPermissionResponse.cs" />
+    <Compile Include="Messaging\PermissionService\GetPermissionResponse.cs" />
+    <Compile Include="Messaging\PermissionService\GetPermissionRequest.cs" />    
+    <Compile Include="Messaging\PermissionService\GetAllPermissionResponse.cs" />
+    <Compile Include="Messaging\PermissionService\RemovePermissionRequest.cs" />    
+    <Compile Include="Messaging\PermissionService\RemovePermissionResponse.cs" /> 
+    <Compile Include="ViewModels\PermissionView.cs" />
+    <Compile Include="Implementations\EmployeeService.cs" />   
+    <Compile Include="Messaging\EmployeeService\CreateEmployeeRequest.cs" />
+    <Compile Include="Messaging\EmployeeService\ModifyEmployeeRequest.cs" /> 
+    <Compile Include="Interfaces\IEmployeeService.cs" />   
+    <Compile Include="Mapping\EmployeeMapper.cs" /> 
+    <Compile Include="Messaging\EmployeeService\CreateEmployeeResponse.cs" />
+    <Compile Include="Messaging\EmployeeService\ModifyEmployeeResponse.cs" />
+    <Compile Include="Messaging\EmployeeService\GetEmployeeResponse.cs" />
+    <Compile Include="Messaging\EmployeeService\GetEmployeeRequest.cs" />    
+    <Compile Include="Messaging\EmployeeService\GetAllEmployeeResponse.cs" />
+    <Compile Include="Messaging\EmployeeService\RemoveEmployeeRequest.cs" />    
+    <Compile Include="Messaging\EmployeeService\RemoveEmployeeResponse.cs" /> 
+    <Compile Include="ViewModels\EmployeeView.cs" />
+    <Compile Include="Implementations\CustomerService.cs" />   
+    <Compile Include="Messaging\CustomerService\CreateCustomerRequest.cs" />
+    <Compile Include="Messaging\CustomerService\ModifyCustomerRequest.cs" /> 
+    <Compile Include="Interfaces\ICustomerService.cs" />   
+    <Compile Include="Mapping\CustomerMapper.cs" /> 
+    <Compile Include="Messaging\CustomerService\CreateCustomerResponse.cs" />
+    <Compile Include="Messaging\CustomerService\ModifyCustomerResponse.cs" />
+    <Compile Include="Messaging\CustomerService\GetCustomerResponse.cs" />
+    <Compile Include="Messaging\CustomerService\GetCustomerRequest.cs" />    
+    <Compile Include="Messaging\CustomerService\GetAllCustomerResponse.cs" />
+    <Compile Include="Messaging\CustomerService\RemoveCustomerRequest.cs" />    
+    <Compile Include="Messaging\CustomerService\RemoveCustomerResponse.cs" /> 
+    <Compile Include="ViewModels\CustomerView.cs" />
+    <Compile Include="Implementations\CustomerDemographicService.cs" />   
+    <Compile Include="Messaging\CustomerDemographicService\CreateCustomerDemographicRequest.cs" />
+    <Compile Include="Messaging\CustomerDemographicService\ModifyCustomerDemographicRequest.cs" /> 
+    <Compile Include="Interfaces\ICustomerDemographicService.cs" />   
+    <Compile Include="Mapping\CustomerDemographicMapper.cs" /> 
+    <Compile Include="Messaging\CustomerDemographicService\CreateCustomerDemographicResponse.cs" />
+    <Compile Include="Messaging\CustomerDemographicService\ModifyCustomerDemographicResponse.cs" />
+    <Compile Include="Messaging\CustomerDemographicService\GetCustomerDemographicResponse.cs" />
+    <Compile Include="Messaging\CustomerDemographicService\GetCustomerDemographicRequest.cs" />    
+    <Compile Include="Messaging\CustomerDemographicService\GetAllCustomerDemographicResponse.cs" />
+    <Compile Include="Messaging\CustomerDemographicService\RemoveCustomerDemographicRequest.cs" />    
+    <Compile Include="Messaging\CustomerDemographicService\RemoveCustomerDemographicResponse.cs" /> 
+    <Compile Include="ViewModels\CustomerDemographicView.cs" />
+    <Compile Include="Implementations\RoleService.cs" />   
+    <Compile Include="Messaging\RoleService\CreateRoleRequest.cs" />
+    <Compile Include="Messaging\RoleService\ModifyRoleRequest.cs" /> 
+    <Compile Include="Interfaces\IRoleService.cs" />   
+    <Compile Include="Mapping\RoleMapper.cs" /> 
+    <Compile Include="Messaging\RoleService\CreateRoleResponse.cs" />
+    <Compile Include="Messaging\RoleService\ModifyRoleResponse.cs" />
+    <Compile Include="Messaging\RoleService\GetRoleResponse.cs" />
+    <Compile Include="Messaging\RoleService\GetRoleRequest.cs" />    
+    <Compile Include="Messaging\RoleService\GetAllRoleResponse.cs" />
+    <Compile Include="Messaging\RoleService\RemoveRoleRequest.cs" />    
+    <Compile Include="Messaging\RoleService\RemoveRoleResponse.cs" /> 
+    <Compile Include="ViewModels\RoleView.cs" />
+    <Compile Include="Implementations\RestrictionService.cs" />   
+    <Compile Include="Messaging\RestrictionService\CreateRestrictionRequest.cs" />
+    <Compile Include="Messaging\RestrictionService\ModifyRestrictionRequest.cs" /> 
+    <Compile Include="Interfaces\IRestrictionService.cs" />   
+    <Compile Include="Mapping\RestrictionMapper.cs" /> 
+    <Compile Include="Messaging\RestrictionService\CreateRestrictionResponse.cs" />
+    <Compile Include="Messaging\RestrictionService\ModifyRestrictionResponse.cs" />
+    <Compile Include="Messaging\RestrictionService\GetRestrictionResponse.cs" />
+    <Compile Include="Messaging\RestrictionService\GetRestrictionRequest.cs" />    
+    <Compile Include="Messaging\RestrictionService\GetAllRestrictionResponse.cs" />
+    <Compile Include="Messaging\RestrictionService\RemoveRestrictionRequest.cs" />    
+    <Compile Include="Messaging\RestrictionService\RemoveRestrictionResponse.cs" /> 
+    <Compile Include="ViewModels\RestrictionView.cs" />
+    <Compile Include="Implementations\RegionService.cs" />   
+    <Compile Include="Messaging\RegionService\CreateRegionRequest.cs" />
+    <Compile Include="Messaging\RegionService\ModifyRegionRequest.cs" /> 
+    <Compile Include="Interfaces\IRegionService.cs" />   
+    <Compile Include="Mapping\RegionMapper.cs" /> 
+    <Compile Include="Messaging\RegionService\CreateRegionResponse.cs" />
+    <Compile Include="Messaging\RegionService\ModifyRegionResponse.cs" />
+    <Compile Include="Messaging\RegionService\GetRegionResponse.cs" />
+    <Compile Include="Messaging\RegionService\GetRegionRequest.cs" />    
+    <Compile Include="Messaging\RegionService\GetAllRegionResponse.cs" />
+    <Compile Include="Messaging\RegionService\RemoveRegionRequest.cs" />    
+    <Compile Include="Messaging\RegionService\RemoveRegionResponse.cs" /> 
+    <Compile Include="ViewModels\RegionView.cs" />
+    <Compile Include="Implementations\SupplierService.cs" />   
+    <Compile Include="Messaging\SupplierService\CreateSupplierRequest.cs" />
+    <Compile Include="Messaging\SupplierService\ModifySupplierRequest.cs" /> 
+    <Compile Include="Interfaces\ISupplierService.cs" />   
+    <Compile Include="Mapping\SupplierMapper.cs" /> 
+    <Compile Include="Messaging\SupplierService\CreateSupplierResponse.cs" />
+    <Compile Include="Messaging\SupplierService\ModifySupplierResponse.cs" />
+    <Compile Include="Messaging\SupplierService\GetSupplierResponse.cs" />
+    <Compile Include="Messaging\SupplierService\GetSupplierRequest.cs" />    
+    <Compile Include="Messaging\SupplierService\GetAllSupplierResponse.cs" />
+    <Compile Include="Messaging\SupplierService\RemoveSupplierRequest.cs" />    
+    <Compile Include="Messaging\SupplierService\RemoveSupplierResponse.cs" /> 
+    <Compile Include="ViewModels\SupplierView.cs" />
+    <Compile Include="Implementations\ShipperService.cs" />   
+    <Compile Include="Messaging\ShipperService\CreateShipperRequest.cs" />
+    <Compile Include="Messaging\ShipperService\ModifyShipperRequest.cs" /> 
+    <Compile Include="Interfaces\IShipperService.cs" />   
+    <Compile Include="Mapping\ShipperMapper.cs" /> 
+    <Compile Include="Messaging\ShipperService\CreateShipperResponse.cs" />
+    <Compile Include="Messaging\ShipperService\ModifyShipperResponse.cs" />
+    <Compile Include="Messaging\ShipperService\GetShipperResponse.cs" />
+    <Compile Include="Messaging\ShipperService\GetShipperRequest.cs" />    
+    <Compile Include="Messaging\ShipperService\GetAllShipperResponse.cs" />
+    <Compile Include="Messaging\ShipperService\RemoveShipperRequest.cs" />    
+    <Compile Include="Messaging\ShipperService\RemoveShipperResponse.cs" /> 
+    <Compile Include="ViewModels\ShipperView.cs" />
+    <Compile Include="Implementations\RoomService.cs" />   
+    <Compile Include="Messaging\RoomService\CreateRoomRequest.cs" />
+    <Compile Include="Messaging\RoomService\ModifyRoomRequest.cs" /> 
+    <Compile Include="Interfaces\IRoomService.cs" />   
+    <Compile Include="Mapping\RoomMapper.cs" /> 
+    <Compile Include="Messaging\RoomService\CreateRoomResponse.cs" />
+    <Compile Include="Messaging\RoomService\ModifyRoomResponse.cs" />
+    <Compile Include="Messaging\RoomService\GetRoomResponse.cs" />
+    <Compile Include="Messaging\RoomService\GetRoomRequest.cs" />    
+    <Compile Include="Messaging\RoomService\GetAllRoomResponse.cs" />
+    <Compile Include="Messaging\RoomService\RemoveRoomRequest.cs" />    
+    <Compile Include="Messaging\RoomService\RemoveRoomResponse.cs" /> 
+    <Compile Include="ViewModels\RoomView.cs" />
+    <Compile Include="Implementations\TerritoryService.cs" />   
+    <Compile Include="Messaging\TerritoryService\CreateTerritoryRequest.cs" />
+    <Compile Include="Messaging\TerritoryService\ModifyTerritoryRequest.cs" /> 
+    <Compile Include="Interfaces\ITerritoryService.cs" />   
+    <Compile Include="Mapping\TerritoryMapper.cs" /> 
+    <Compile Include="Messaging\TerritoryService\CreateTerritoryResponse.cs" />
+    <Compile Include="Messaging\TerritoryService\ModifyTerritoryResponse.cs" />
+    <Compile Include="Messaging\TerritoryService\GetTerritoryResponse.cs" />
+    <Compile Include="Messaging\TerritoryService\GetTerritoryRequest.cs" />    
+    <Compile Include="Messaging\TerritoryService\GetAllTerritoryResponse.cs" />
+    <Compile Include="Messaging\TerritoryService\RemoveTerritoryRequest.cs" />    
+    <Compile Include="Messaging\TerritoryService\RemoveTerritoryResponse.cs" /> 
+    <Compile Include="ViewModels\TerritoryView.cs" />
+    <Compile Include="Implementations\ProductService.cs" />   
+    <Compile Include="Messaging\ProductService\CreateProductRequest.cs" />
+    <Compile Include="Messaging\ProductService\ModifyProductRequest.cs" /> 
+    <Compile Include="Interfaces\IProductService.cs" />   
+    <Compile Include="Mapping\ProductMapper.cs" /> 
+    <Compile Include="Messaging\ProductService\CreateProductResponse.cs" />
+    <Compile Include="Messaging\ProductService\ModifyProductResponse.cs" />
+    <Compile Include="Messaging\ProductService\GetProductResponse.cs" />
+    <Compile Include="Messaging\ProductService\GetProductRequest.cs" />    
+    <Compile Include="Messaging\ProductService\GetAllProductResponse.cs" />
+    <Compile Include="Messaging\ProductService\RemoveProductRequest.cs" />    
+    <Compile Include="Messaging\ProductService\RemoveProductResponse.cs" /> 
+    <Compile Include="ViewModels\ProductView.cs" />
+    <Compile Include="Implementations\OrderService.cs" />   
+    <Compile Include="Messaging\OrderService\CreateOrderRequest.cs" />
+    <Compile Include="Messaging\OrderService\ModifyOrderRequest.cs" /> 
+    <Compile Include="Interfaces\IOrderService.cs" />   
+    <Compile Include="Mapping\OrderMapper.cs" /> 
+    <Compile Include="Messaging\OrderService\CreateOrderResponse.cs" />
+    <Compile Include="Messaging\OrderService\ModifyOrderResponse.cs" />
+    <Compile Include="Messaging\OrderService\GetOrderResponse.cs" />
+    <Compile Include="Messaging\OrderService\GetOrderRequest.cs" />    
+    <Compile Include="Messaging\OrderService\GetAllOrderResponse.cs" />
+    <Compile Include="Messaging\OrderService\RemoveOrderRequest.cs" />    
+    <Compile Include="Messaging\OrderService\RemoveOrderResponse.cs" /> 
+    <Compile Include="ViewModels\OrderView.cs" />
+    <Compile Include="Implementations\UserService.cs" />   
+    <Compile Include="Messaging\UserService\CreateUserRequest.cs" />
+    <Compile Include="Messaging\UserService\ModifyUserRequest.cs" /> 
+    <Compile Include="Interfaces\IUserService.cs" />   
+    <Compile Include="Mapping\UserMapper.cs" /> 
+    <Compile Include="Messaging\UserService\CreateUserResponse.cs" />
+    <Compile Include="Messaging\UserService\ModifyUserResponse.cs" />
+    <Compile Include="Messaging\UserService\GetUserResponse.cs" />
+    <Compile Include="Messaging\UserService\GetUserRequest.cs" />    
+    <Compile Include="Messaging\UserService\GetAllUserResponse.cs" />
+    <Compile Include="Messaging\UserService\RemoveUserRequest.cs" />    
+    <Compile Include="Messaging\UserService\RemoveUserResponse.cs" /> 
+    <Compile Include="ViewModels\UserView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ICreative.Infrastructure\ICreative.Infrastructure.csproj">
+      <Project>{fbb6c612-0ffd-46b2-8b42-4c1a03eda0d2}</Project>
+      <Name>ICreative.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICreative.Model\ICreative.Model.csproj">
+      <Project>{5fb40bde-e355-4345-8011-fe8c74ca8683}</Project>
+      <Name>ICreative.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

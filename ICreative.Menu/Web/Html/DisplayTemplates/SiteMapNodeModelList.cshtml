@@ -1,0 +1,28 @@
+﻿
+@using System.Web.Mvc.Html
+@using ICreative.Menu.Web.Html.Models
+@model ICreative.Menu.Web.Html.Models.SiteMapNodeModelList
+
+
+<ul class="dropdown-menu" role="menu">
+    @foreach (SiteMapNodeModel node in Model)
+    {
+        if (node.Title == "Separator")
+        {
+            <li class="divider"></li>
+            continue;
+        }
+
+        string url = node.IsClickable ? node.Url : "#";
+
+        if (!node.Children.Any())
+        {
+            <li><a href="@url">@node.Title</a></li>
+        }
+        else
+        {
+            <li class="dropdown-submenu"><a href="@url">@node.Title</a>@Html.DisplayFor(m => node.Children)</li>
+        }
+    }
+    
+</ul>

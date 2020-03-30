@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="Home" controller="ListUser" action="Index">
+    <mvcSiteMapNode title="Customer" controller="ListCustomer" action="Index">
+      <mvcSiteMapNode title="Room" controller="ListRoom" action="Index"/>
+      <mvcSiteMapNode title="Product" controller="ListProduct" action="Index">
+           <mvcSiteMapNode title="Room" controller="ListRoom" action="Index"/>
+           <mvcSiteMapNode title="Region" controller="ListRegion" action="Index"/>
+        <mvcSiteMapNode title="Shiper" controller="ListShiper" action="Index"/>
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="PosDevice" controller="PosDeviceTable" action="Index"/>   
+      <mvcSiteMapNode title="PosAddress" controller="PosAddressTable" action="Index"/>   
+      <mvcSiteMapNode title="PosStatusTerminal" controller="PosStatusTerminalTable" action="Index"/>   
+      <mvcSiteMapNode title="PosStatusSim" controller="PosStatusSimTable" action="Index"/>   
+      <mvcSiteMapNode title="PosSimProvider" controller="PosSimProviderTable" action="Index"/>   
+      <mvcSiteMapNode title="PosMerchant" controller="PosMerchantTable" action="Index"/>   
+      <mvcSiteMapNode title="PosSim" controller="PosSimTable" action="Index"/>   
+      <mvcSiteMapNode title="PosReceiptOfTesting" controller="PosReceiptOfTestingTable" action="Index"/>   
+      <mvcSiteMapNode title="PosReceiptOfDelivery" controller="PosReceiptOfDeliveryTable" action="Index"/>   
+      <mvcSiteMapNode title="PosTerminal" controller="PosTerminalTable" action="Index"/>   
+      <mvcSiteMapNode title="Categories" controller="CategoryTable" action="Index"/>   
+      <mvcSiteMapNode title="MenuItem" controller="MenuItemTable" action="Index"/>   
+      <mvcSiteMapNode title="Quyền hạn" controller="PermissionTable" action="Index"/>   
+      <mvcSiteMapNode title="Employees" controller="EmployeeTable" action="Index"/>   
+      <mvcSiteMapNode title="Customers" controller="CustomerTable" action="Index"/>   
+      <mvcSiteMapNode title="CustomerDemographics" controller="CustomerDemographicTable" action="Index"/>   
+      <mvcSiteMapNode title="Nhóm quyền" controller="RoleTable" action="Index"/>   
+      <mvcSiteMapNode title="Giới hạn" controller="RestrictionTable" action="Index"/>   
+      <mvcSiteMapNode title="Vùng" controller="RegionTable" action="Index"/>   
+      <mvcSiteMapNode title="Suppliers" controller="SupplierTable" action="Index"/>   
+      <mvcSiteMapNode title="Shippers" controller="ShipperTable" action="Index"/>   
+      <mvcSiteMapNode title="Phong" controller="RoomTable" action="Index"/>   
+      <mvcSiteMapNode title="Territories" controller="TerritoryTable" action="Index"/>   
+      <mvcSiteMapNode title="Products" controller="ProductTable" action="Index"/>   
+      <mvcSiteMapNode title="Orders" controller="OrderTable" action="Index"/>   
+      <mvcSiteMapNode title="Người dùng" controller="UserTable" action="Index"/>   
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="Order" controller="ListOrder" action="Index"/>
+  </mvcSiteMapNode>
+</mvcSiteMap>

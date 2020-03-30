@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C927507-ACDB-4F1C-A884-581A6A519A01}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ICreative.Controllers</RootNamespace>
+    <AssemblyName>ICreative.Controllers</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=1.0.0.155, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="TemplateEngine.Docx">
+      <HintPath>..\Lib\TemplateEngine.Docx.dll</HintPath>
+    </Reference>
+    <Reference Include="Mvc.Ultility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Mvc.Ultility.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CustomerDetailController.cs" />
+    <Compile Include="Controllers\PosDeviceTableController.cs" />
+    <Compile Include="Controllers\PosAddressTableController.cs" />
+    <Compile Include="Controllers\PosStatusTerminalTableController.cs" />
+    <Compile Include="Controllers\PosStatusSimTableController.cs" />
+    <Compile Include="Controllers\PosSimProviderTableController.cs" />
+    <Compile Include="Controllers\PosMerchantTableController.cs" />
+    <Compile Include="Controllers\PosSimTableController.cs" />
+    <Compile Include="Controllers\PosReceiptOfTestingTableController.cs" />
+    <Compile Include="Controllers\PosReceiptOfDeliveryTableController.cs" />
+    <Compile Include="Controllers\PosTerminalTableController.cs" />
+    <Compile Include="Controllers\CategoryTableController.cs" />
+    <Compile Include="Controllers\MenuItemTableController.cs" />
+    <Compile Include="Controllers\PermissionTableController.cs" />
+    <Compile Include="Controllers\EmployeeTableController.cs" />
+    <Compile Include="Controllers\CustomerTableController.cs" />
+    <Compile Include="Controllers\CustomerDemographicTableController.cs" />
+    <Compile Include="Controllers\ProductDetailController.cs" />
+    <Compile Include="Controllers\RoleTableController.cs" />
+    <Compile Include="Controllers\RestrictionTableController.cs" />
+    <Compile Include="Controllers\RegionTableController.cs" />
+    <Compile Include="Controllers\SupplierTableController.cs" />
+    <Compile Include="Controllers\ShipperTableController.cs" />
+    <Compile Include="Controllers\RoomTableController.cs" />
+    <Compile Include="Controllers\TerritoryTableController.cs" />
+    <Compile Include="Controllers\ProductTableController.cs" />
+    <Compile Include="Controllers\OrderTableController.cs" />
+    <Compile Include="Controllers\UserDetailController.cs" />
+    <Compile Include="Controllers\UserTableController.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\PosDeviceDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\PosAddressDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\PosStatusTerminalDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\PosStatusSimDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\PosSimProviderDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\PosMerchantDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\PosSimDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\PosReceiptOfTestingDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\PosReceiptOfDeliveryDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\PosTerminalDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\CategoryDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\MenuItemDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\PermissionDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\EmployeeDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\CustomerDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\CustomerDemographicDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\RoleDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\RestrictionDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\RegionDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\SupplierDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\ShipperDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\RoomDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\TerritoryDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\ProductDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\OrderDetailView.cs" />
+    <Compile Include="ViewModels\Datatable\Detail\UserDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailCategoryDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailCustomerDemographicDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailCustomerDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailEmployeeDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailMenuItemDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailOrderDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailPermissionDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailPosAddressDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailPosDeviceDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailPosMerchantDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailPosReceiptOfDeliveryDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailPosReceiptOfTestingDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailPosSimDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailPosSimProviderDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailPosStatusSimDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailPosStatusTerminalDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailPosTerminalDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailProductDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailRegionDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailRestrictionDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailRoleDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailRoomDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailShipperDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailSupplierDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailTerritoryDetailView.cs" />
+    <Compile Include="ViewModels\Detail\DetailUserDetailView.cs" />
+    <Compile Include="ViewModels\FlatModels\PosDeviceFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\PosAddressFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\PosStatusTerminalFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\PosStatusSimFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\PosSimProviderFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\PosMerchantFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\PosSimFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\PosReceiptOfTestingFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\PosReceiptOfDeliveryFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\PosTerminalFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\CategoryFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\MenuItemFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\PermissionFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\EmployeeFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\CustomerFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\CustomerDemographicFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\RoleFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\RestrictionFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\RegionFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\SupplierFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\ShipperFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\RoomFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\TerritoryFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\ProductFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\OrderFlatViewModel.cs" />
+    <Compile Include="ViewModels\FlatModels\UserFlatViewModel.cs" />
+    <Compile Include="Mapping\PosDeviceFlatModelMapper.cs" />
+    <Compile Include="Mapping\PosAddressFlatModelMapper.cs" />
+    <Compile Include="Mapping\PosStatusTerminalFlatModelMapper.cs" />
+    <Compile Include="Mapping\PosStatusSimFlatModelMapper.cs" />
+    <Compile Include="Mapping\PosSimProviderFlatModelMapper.cs" />
+    <Compile Include="Mapping\PosMerchantFlatModelMapper.cs" />
+    <Compile Include="Mapping\PosSimFlatModelMapper.cs" />
+    <Compile Include="Mapping\PosReceiptOfTestingFlatModelMapper.cs" />
+    <Compile Include="Mapping\PosReceiptOfDeliveryFlatModelMapper.cs" />
+    <Compile Include="Mapping\PosTerminalFlatModelMapper.cs" />
+    <Compile Include="Mapping\CategoryFlatModelMapper.cs" />
+    <Compile Include="Mapping\MenuItemFlatModelMapper.cs" />
+    <Compile Include="Mapping\PermissionFlatModelMapper.cs" />
+    <Compile Include="Mapping\EmployeeFlatModelMapper.cs" />
+    <Compile Include="Mapping\CustomerFlatModelMapper.cs" />
+    <Compile Include="Mapping\CustomerDemographicFlatModelMapper.cs" />
+    <Compile Include="Mapping\RoleFlatModelMapper.cs" />
+    <Compile Include="Mapping\RestrictionFlatModelMapper.cs" />
+    <Compile Include="Mapping\RegionFlatModelMapper.cs" />
+    <Compile Include="Mapping\SupplierFlatModelMapper.cs" />
+    <Compile Include="Mapping\ShipperFlatModelMapper.cs" />
+    <Compile Include="Mapping\RoomFlatModelMapper.cs" />
+    <Compile Include="Mapping\TerritoryFlatModelMapper.cs" />
+    <Compile Include="Mapping\ProductFlatModelMapper.cs" />
+    <Compile Include="Mapping\OrderFlatModelMapper.cs" />
+    <Compile Include="Mapping\UserFlatModelMapper.cs" />
+    <Compile Include="ViewModels\Datatable\Table\PosDeviceTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\PosAddressTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\PosStatusTerminalTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\PosStatusSimTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\PosSimProviderTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\PosMerchantTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\PosSimTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\PosReceiptOfTestingTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\PosReceiptOfDeliveryTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\PosTerminalTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\CategoryTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\MenuItemTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\PermissionTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\EmployeeTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\CustomerTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\CustomerDemographicTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\RoleTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\RestrictionTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\RegionTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\SupplierTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\ShipperTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\RoomTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\TerritoryTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\ProductTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\OrderTableViewModel.cs" />
+    <Compile Include="ViewModels\Datatable\Table\UserTableViewModel.cs" />
+    <Compile Include="CustomPrincipal.cs" />
+    <Compile Include="CustomIdentity.cs" />
+    <Compile Include="LdapFormsAuthentication.cs" />
+    <Compile Include="DBFormAuthentication.cs" />
+    <Compile Include="SecurityApplicationService.cs" />
+    <Compile Include="AuthorizeUserAttribute.cs" />
+    <Compile Include="ViewModels\Security\CookieViewModel.cs" />
+    <Compile Include="ViewModels\Security\CustomPrincipalSerializeModel.cs" />
+    <Compile Include="ViewModels\Security\IPrincipalSerializeModel.cs" />
+    <Compile Include="ViewModels\Security\LoginViewModel.cs" />
+    <Compile Include="ViewModels\Security\RightView.cs" />
+    <Compile Include="LoginController.cs" />
+    <Compile Include="PermissionLoader.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticDataSources.cs" />
+    <Compile Include="SortExpression.cs" />
+    <Compile Include="SortExpressionHelper.cs" />
+    <Compile Include="BaseViewPage.cs" />
+    <Compile Include="DocxHelper.cs" />
+    <Compile Include="SortSetting.cs" />
+    <Compile Include="SingletonRestrictionCollection.cs" />
+    <Compile Include="AutoMapperBootStrapper.cs" />
+    <Compile Include="ViewModels\Datatable\DataTableViewModel.cs" />
+    <Compile Include="ViewModels\Pager\WebPager.cs" />
+    <Compile Include="ViewModels\Pager\WebPagerCommands.cs" />
+    <Compile Include="ViewModels\Pager\WebPagerItem.cs" />
+    <Compile Include="ViewModels\Pager\WebPagerItemCollection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ICreative.Infrastructure\ICreative.Infrastructure.csproj">
+      <Project>{fbb6c612-0ffd-46b2-8b42-4c1a03eda0d2}</Project>
+      <Name>ICreative.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICreative.Model\ICreative.Model.csproj">
+      <Project>{5fb40bde-e355-4345-8011-fe8c74ca8683}</Project>
+      <Name>ICreative.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICreative.Service\ICreative.Service.csproj">
+      <Project>{3bef0a3f-a420-434a-9565-fa7d1cd6a1bc}</Project>
+      <Name>ICreative.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

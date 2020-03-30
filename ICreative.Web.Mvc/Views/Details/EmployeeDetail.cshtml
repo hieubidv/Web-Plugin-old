@@ -1,0 +1,203 @@
+﻿
+@model System.Int32
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section plugin_css {
+    <link href="~/Content/css/Plugins/dataTables/datatables.min.css" rel="stylesheet" type="text/css">
+}
+
+@section plugin_scripts {
+    <script src="~/Content/js/plugins/tables/datatables/datatables.min.js"></script>
+    <script src="~/Content/js/plugins/tables/dataTables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Content/js/plugins/notifications/bootbox.min.js"></script>
+    <script src="~/Content/js/Pages/Datatables/EmployeeDetail.js"></script>
+}
+
+
+<input type="hidden" id="EmployeeID" name="EmployeeID" value="@Model" />
+<div class="ibox ">
+    <div class="ibox-title">
+        <h5>Basic Data Tables example with responsive plugin</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href="#" class="dropdown-item">Config option 1</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <table class="table text-nowrap">
+            <thead>
+                <tr>
+                    <th>Thuoc tinh</th>
+                    <th>Gia tri</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-active table-border-double">
+                    <td colspan="2">Today</td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">EmployeeID</span></td>
+                    <td><label id="EmployeeID" name="EmployeeID"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">LastName</span></td>
+                    <td><label id="LastName" name="LastName"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">FirstName</span></td>
+                    <td><label id="FirstName" name="FirstName"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">Title</span></td>
+                    <td><label id="Title" name="Title"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">TitleOfCourtesy</span></td>
+                    <td><label id="TitleOfCourtesy" name="TitleOfCourtesy"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">BirthDate</span></td>
+                    <td><label id="BirthDate" name="BirthDate"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">HireDate</span></td>
+                    <td><label id="HireDate" name="HireDate"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">Address</span></td>
+                    <td><label id="Address" name="Address"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">City</span></td>
+                    <td><label id="City" name="City"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">Region</span></td>
+                    <td><label id="Region" name="Region"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">PostalCode</span></td>
+                    <td><label id="PostalCode" name="PostalCode"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">Country</span></td>
+                    <td><label id="Country" name="Country"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">HomePhone</span></td>
+                    <td><label id="HomePhone" name="HomePhone"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">Extension</span></td>
+                    <td><label id="Extension" name="Extension"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">Photo</span></td>
+                    <td><label id="Photo" name="Photo"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">Notes</span></td>
+                    <td><label id="Notes" name="Notes"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">PhotoPath</span></td>
+                    <td><label id="PhotoPath" name="PhotoPath"> not thing</label></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="ibox ">
+    <div class="ibox-title">
+        <h5>Basic Data Tables example with responsive plugin</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href="#" class="dropdown-item">Config option 1</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="tabs-container">
+            <ul class="nav nav-tabs" role="tablist">
+                <li><a class="nav-link active" data-toggle="tab" href="#tab-1"> Territory</a></li>
+                <li><a class="nav-link" data-toggle="tab" href="#tab-2"> Order</a></li>			
+            </ul>
+            <div class="tab-content">
+
+                <div role="tabpanel" id="tab-1" class="tab-pane active">
+                    <div class="panel-body">
+                      <div class="table-responsive">		
+                        <table id="TerritoryTable" class="table table-bordered table-hover datatable-highlight dataTable no-footer" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>TerritoryID</th>
+                                    <th>TerritoryDescription</th>
+                                </tr>
+                            </thead>
+                        </table>
+		              </div>
+                    </div>
+                </div>
+
+                <div role="tabpanel" id="tab-2" class="tab-pane">
+                    <div class="panel-body">
+                      <div class="table-responsive">		
+                        <table id="OrderTable" class="table table-bordered table-hover datatable-highlight dataTable no-footer" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>OrderID</th>
+                                    <th>OrderDate</th>
+                                    <th>RequiredDate</th>
+                                    <th>ShippedDate</th>
+                                    <th>Freight</th>
+                                    <th>ShipName</th>
+                                    <th>ShipAddress</th>
+                                    <th>ShipCity</th>
+                                    <th>ShipRegion</th>
+                                    <th>ShipPostalCode</th>
+                                    <th>ShipCountry</th>
+                                </tr>
+                            </thead>
+                        </table>
+		              </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

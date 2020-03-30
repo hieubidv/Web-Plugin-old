@@ -1,0 +1,108 @@
+﻿
+@model System.Int32
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section plugin_css {
+    <link href="~/Content/css/Plugins/dataTables/datatables.min.css" rel="stylesheet" type="text/css">
+}
+
+@section plugin_scripts {
+    <script src="~/Content/js/plugins/tables/datatables/datatables.min.js"></script>
+    <script src="~/Content/js/plugins/tables/dataTables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Content/js/plugins/notifications/bootbox.min.js"></script>
+    <script src="~/Content/js/Pages/Datatables/MenuItemDetail.js"></script>
+}
+
+
+<input type="hidden" id="MenuItemId" name="MenuItemId" value="@Model" />
+<div class="ibox ">
+    <div class="ibox-title">
+        <h5>Basic Data Tables example with responsive plugin</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href="#" class="dropdown-item">Config option 1</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <table class="table text-nowrap">
+            <thead>
+                <tr>
+                    <th>Thuoc tinh</th>
+                    <th>Gia tri</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-active table-border-double">
+                    <td colspan="2">Today</td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">MenuItemId</span></td>
+                    <td><label id="MenuItemId" name="MenuItemId"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">MenuItemName</span></td>
+                    <td><label id="MenuItemName" name="MenuItemName"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">ParentId</span></td>
+                    <td><label id="ParentId" name="ParentId"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">MenuItemUrl</span></td>
+                    <td><label id="MenuItemUrl" name="MenuItemUrl"> not thing</label></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="ibox ">
+    <div class="ibox-title">
+        <h5>Basic Data Tables example with responsive plugin</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href="#" class="dropdown-item">Config option 1</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="tabs-container">
+            <ul class="nav nav-tabs" role="tablist">
+            </ul>
+            <div class="tab-content">
+            </div>
+        </div>
+    </div>
+</div>

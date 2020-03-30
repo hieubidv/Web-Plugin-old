@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5FB40BDE-E355-4345-8011-FE8C74CA8683}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ICreative.Model</RootNamespace>
+    <AssemblyName>ICreative.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>  
+    <Compile Include="PosDevice.cs" />
+    <Compile Include="PosDeviceBusinessRule.cs" />
+    <Compile Include="IPosDeviceRepository.cs" />
+    <Compile Include="PosAddress.cs" />
+    <Compile Include="PosAddressBusinessRule.cs" />
+    <Compile Include="IPosAddressRepository.cs" />
+    <Compile Include="PosStatusTerminal.cs" />
+    <Compile Include="PosStatusTerminalBusinessRule.cs" />
+    <Compile Include="IPosStatusTerminalRepository.cs" />
+    <Compile Include="PosStatusSim.cs" />
+    <Compile Include="PosStatusSimBusinessRule.cs" />
+    <Compile Include="IPosStatusSimRepository.cs" />
+    <Compile Include="PosSimProvider.cs" />
+    <Compile Include="PosSimProviderBusinessRule.cs" />
+    <Compile Include="IPosSimProviderRepository.cs" />
+    <Compile Include="PosMerchant.cs" />
+    <Compile Include="PosMerchantBusinessRule.cs" />
+    <Compile Include="IPosMerchantRepository.cs" />
+    <Compile Include="PosSim.cs" />
+    <Compile Include="PosSimBusinessRule.cs" />
+    <Compile Include="IPosSimRepository.cs" />
+    <Compile Include="PosReceiptOfTesting.cs" />
+    <Compile Include="PosReceiptOfTestingBusinessRule.cs" />
+    <Compile Include="IPosReceiptOfTestingRepository.cs" />
+    <Compile Include="PosReceiptOfDelivery.cs" />
+    <Compile Include="PosReceiptOfDeliveryBusinessRule.cs" />
+    <Compile Include="IPosReceiptOfDeliveryRepository.cs" />
+    <Compile Include="PosTerminal.cs" />
+    <Compile Include="PosTerminalBusinessRule.cs" />
+    <Compile Include="IPosTerminalRepository.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="CategoryBusinessRule.cs" />
+    <Compile Include="ICategoryRepository.cs" />
+    <Compile Include="MenuItem.cs" />
+    <Compile Include="MenuItemBusinessRule.cs" />
+    <Compile Include="IMenuItemRepository.cs" />
+    <Compile Include="Permission.cs" />
+    <Compile Include="PermissionBusinessRule.cs" />
+    <Compile Include="IPermissionRepository.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="EmployeeBusinessRule.cs" />
+    <Compile Include="IEmployeeRepository.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerBusinessRule.cs" />
+    <Compile Include="ICustomerRepository.cs" />
+    <Compile Include="CustomerDemographic.cs" />
+    <Compile Include="CustomerDemographicBusinessRule.cs" />
+    <Compile Include="ICustomerDemographicRepository.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="RoleBusinessRule.cs" />
+    <Compile Include="IRoleRepository.cs" />
+    <Compile Include="Restriction.cs" />
+    <Compile Include="RestrictionBusinessRule.cs" />
+    <Compile Include="IRestrictionRepository.cs" />
+    <Compile Include="Region.cs" />
+    <Compile Include="RegionBusinessRule.cs" />
+    <Compile Include="IRegionRepository.cs" />
+    <Compile Include="Supplier.cs" />
+    <Compile Include="SupplierBusinessRule.cs" />
+    <Compile Include="ISupplierRepository.cs" />
+    <Compile Include="Shipper.cs" />
+    <Compile Include="ShipperBusinessRule.cs" />
+    <Compile Include="IShipperRepository.cs" />
+    <Compile Include="Room.cs" />
+    <Compile Include="RoomBusinessRule.cs" />
+    <Compile Include="IRoomRepository.cs" />
+    <Compile Include="Territory.cs" />
+    <Compile Include="TerritoryBusinessRule.cs" />
+    <Compile Include="ITerritoryRepository.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="ProductBusinessRule.cs" />
+    <Compile Include="IProductRepository.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderBusinessRule.cs" />
+    <Compile Include="IOrderRepository.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserBusinessRule.cs" />
+    <Compile Include="IUserRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ICreative.Infrastructure\ICreative.Infrastructure.csproj">
+      <Project>{fbb6c612-0ffd-46b2-8b42-4c1a03eda0d2}</Project>
+      <Name>ICreative.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,119 @@
+﻿
+@model System.Int32
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section plugin_css {
+    <link href="~/Content/css/Plugins/dataTables/datatables.min.css" rel="stylesheet" type="text/css">
+}
+
+@section plugin_scripts {
+    <script src="~/Content/js/plugins/tables/datatables/datatables.min.js"></script>
+    <script src="~/Content/js/plugins/tables/dataTables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Content/js/plugins/notifications/bootbox.min.js"></script>
+    <script src="~/Content/js/Pages/Datatables/PosSimProviderDetail.js"></script>
+}
+
+
+<input type="hidden" id="SimProviderId" name="SimProviderId" value="@Model" />
+<div class="ibox ">
+    <div class="ibox-title">
+        <h5>Basic Data Tables example with responsive plugin</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href="#" class="dropdown-item">Config option 1</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <table class="table text-nowrap">
+            <thead>
+                <tr>
+                    <th>Thuoc tinh</th>
+                    <th>Gia tri</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-active table-border-double">
+                    <td colspan="2">Today</td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">SimProviderId</span></td>
+                    <td><label id="SimProviderId" name="SimProviderId"> not thing</label></td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">SimProviderName</span></td>
+                    <td><label id="SimProviderName" name="SimProviderName"> not thing</label></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="ibox ">
+    <div class="ibox-title">
+        <h5>Basic Data Tables example with responsive plugin</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href="#" class="dropdown-item">Config option 1</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="tabs-container">
+            <ul class="nav nav-tabs" role="tablist">
+                <li><a class="nav-link active" data-toggle="tab" href="#tab-1"> PosSim</a></li>
+            </ul>
+            <div class="tab-content">
+
+                <div role="tabpanel" id="tab-1" class="tab-pane active">
+                    <div class="panel-body">
+                      <div class="table-responsive">		
+                        <table id="PosSimTable" class="table table-bordered table-hover datatable-highlight dataTable no-footer" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>SimId</th>
+                                    <th>SimCode</th>
+                                    <th>SimPhoneNumber</th>
+                                    <th>AddedDate</th>
+                                </tr>
+                            </thead>
+                        </table>
+		              </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

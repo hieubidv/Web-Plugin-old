@@ -1,0 +1,21 @@
+﻿
+@using System.Web.Mvc.Html
+@model ICreative.Menu.Web.Html.Models.SiteMapNodeModel
+
+@if (Model.Title == "Separator")
+{
+    <li class="divider"></li>
+}
+else
+{
+    string url = Model.IsClickable ? Model.Url : "#";
+
+    if (!Model.Children.Any())
+    {
+        <li><a href="@url">@Model.Title</a></li>
+    }
+    else
+    {
+        <li class="dropdown-submenu"><a href="@url">@Model.Title</a>@Html.DisplayFor(m => Model.Children)</li>
+    }
+}
